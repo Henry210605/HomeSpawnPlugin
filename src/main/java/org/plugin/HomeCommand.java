@@ -51,7 +51,6 @@ public class HomeCommand implements CommandExecutor {
                 homesConfig.set(uuid + ".y", loc.getY());
                 homesConfig.set(uuid + ".z", loc.getZ());
                 homesConfig.set(uuid + ".yaw", loc.getYaw());
-                homesConfig.set(uuid + ".pitch", loc.getPitch());
                 saveHomesFile();
                 player.sendMessage("§aHome gesetzt!");
             }
@@ -65,9 +64,8 @@ public class HomeCommand implements CommandExecutor {
                 double y = homesConfig.getDouble(uuid + ".y");
                 double z = homesConfig.getDouble(uuid + ".z");
                 float yaw = (float) homesConfig.getDouble(uuid + ".yaw");
-                float pitch = (float) homesConfig.getDouble(uuid + ".pitch");
 
-                Location home = new Location(Bukkit.getWorld(worldName), x, y, z, yaw, pitch);
+                Location home = new Location(Bukkit.getWorld(worldName), x, y, z, yaw, 0);
                 player.teleport(home);
                 player.sendMessage("§aNach Hause teleportiert!");
             }

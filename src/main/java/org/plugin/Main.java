@@ -7,7 +7,6 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("HomeSpawnPlugin gestartet!");
-        saveDefaultConfig();
 
         HomeCommand homeCommand = new HomeCommand(this);
         getCommand("sethome").setExecutor(homeCommand);
