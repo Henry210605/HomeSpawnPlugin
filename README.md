@@ -6,5 +6,5 @@ Einfaches Minecraft Plugin für Minecraft 1.21.2 Paper Server
 - `/home` — Teleportiert dich nach Hause
 - `/spawn` — Teleportiert dich zum Spawn
 
- ##aktuell Fehlende Features:
+ ## aktuell Fehlende Features:
  -aktuell nur speicherung des Home im RAM
