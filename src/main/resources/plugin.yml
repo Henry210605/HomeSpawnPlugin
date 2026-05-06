@@ -8,5 +8,9 @@ commands:
     description: Setzt dein Zuhause
   home:
     description: Teleportiert dich nach Hause
+  clearhome:
+    description: Löscht dein Zuhause
+  clearhomes:
+    description: Löscht die Zuhause aller Spieler
   spawn:
     description: Teleportiert dich zum Spawn

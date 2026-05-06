@@ -52,11 +52,11 @@ public class HomeCommand implements CommandExecutor {
                 homesConfig.set(uuid + ".z", loc.getZ());
                 homesConfig.set(uuid + ".yaw", loc.getYaw());
                 saveHomesFile();
-                player.sendMessage("§aHome gesetzt!");
+                player.sendMessage("§aZuhause gesetzt!");
             }
             case "home" -> {
                 if (!homesConfig.contains(uuid)) {
-                    player.sendMessage("§cDu hast noch kein Home gesetzt. Nutze /sethome.");
+                    player.sendMessage("§cDu hast noch kein Zuhause gesetzt. Nutze /sethome.");
                     return true;
                 }
                 String worldName = homesConfig.getString(uuid + ".world");
@@ -68,6 +68,25 @@ public class HomeCommand implements CommandExecutor {
                 Location home = new Location(Bukkit.getWorld(worldName), x, y, z, yaw, 0);
                 player.teleport(home);
                 player.sendMessage("§aNach Hause teleportiert!");
+            }
+            case "clearhome" -> {
+                if (!homesConfig.contains(uuid)) {
+                    player.sendMessage("§cDu hast kein Zuhause gesetzt.");
+                    return true;
+                }
+
+                homesConfig.set(uuid, null);
+                saveHomesFile();
+                player.sendMessage("§aDein Zuhause wurde gelöscht!");
+            }
+            case "clearhomes" -> {
+                if (!player.isOp()) {
+                    player.sendMessage("§cNur Ops dürfen diesen Befehl nutzen.");
+                    return true;
+                }
+                homesConfig = new YamlConfiguration();
+                saveHomesFile();
+                player.sendMessage("§aAlle Zuhause gelöscht!");
             }
         }
         return true;
