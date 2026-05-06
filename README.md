@@ -1,5 +1,5 @@
 # HomeSpawnPlugin
-Einfaches Minecraft Plugin für Minecraft 1.21.2 Paper Server
+Einfaches Minecraft Plugin für Minecraft 26.1.2 Paper Server
  
 ## Verfügbare Commands:
 - `/sethome` - Setzt dein Zuhause
