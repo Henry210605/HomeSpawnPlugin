@@ -1,0 +1,12 @@
+name: HomeSpawnPlugin
+version: 1.0
+main: org.plugin.Main
+api-version: "1.21"
+
+commands:
+  sethome:
+    description: Setzt dein Zuhause
+  home:
+    description: Teleportiert dich nach Hause
+  spawn:
+    description: Teleportiert dich zum Spawn
