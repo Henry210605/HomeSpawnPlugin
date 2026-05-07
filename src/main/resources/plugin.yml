@@ -1,5 +1,5 @@
 name: HomeSpawnPlugin
-version: 1.1
+version: 1.2
 main: org.plugin.Main
 api-version: "26.1.2"
 
@@ -14,3 +14,5 @@ commands:
     description: Löscht die Zuhause aller Spieler
   spawn:
     description: Teleportiert dich zum Spawn
+  back:
+    description: Teleportiert dich zum letzten Standort vor deinem Tod

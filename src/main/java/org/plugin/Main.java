@@ -14,6 +14,8 @@ public class Main extends JavaPlugin {
         getCommand("clearhome").setExecutor(homeCommand);
         getCommand("clearhomes").setExecutor(homeCommand);
 
+        getCommand("back").setExecutor(new BackCommand(this));
+
         SpawnCommand spawnCommand = new SpawnCommand(this);
         getCommand("spawn").setExecutor(spawnCommand);
     }

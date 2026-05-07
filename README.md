@@ -8,3 +8,4 @@ Zur Installation muss ein Maven Build ausgeführt werden. Die Java Version ist 2
 - `/clearhome` - Löscht dein Zuhause
 - `/clearhomes` - Löscht die Homes aller Spieler
 - `/spawn` - Teleportiert dich zum Spawn
+- `/back` - Teleportiert dich zum letzten Standort vor deinem Tod
